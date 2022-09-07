@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Proctor</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="start_box edit_box ">
+    <h3>Instructions</h3>
+    <p>Total number of questions: <span class="total-ques">5</span></p>
+    <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+  </div>
+  <div class="quiz_box edit_box hide">
+    <div class="que_num">
+
+    </div>
+    <div class="que_txt">
+
+    </div>
+    <div class="options">
+
+    </div>
+    <div class="next-que-btn">
+      <button type="button" class="btn" onclick="next()">Next</button>
+    </div>
+    <div class="ans-indicators">
+
+    </div>
+  </div>
+  <div class="result_box edit_box hide">
+    <h1>Quiz Result</h1>
+    <table>
+      <tr>
+        <td>Total Question</td>
+        <td><span class="total_que">5</span></td>
+      </tr>
+      <tr>
+        <td>Attempt</td>
+        <td><span class="total_attempt">4</span></td>
+      </tr>
+      <tr>
+        <td>Correct</td>
+        <td><span class="total_right">3</span></td>
+      </tr>
+      <tr>
+        <td>Wrong</td>
+        <td><span class="total-wrong">1</span></td>
+      </tr>
+      <tr>
+        <td>Percentage</td>
+        <td><span class="percent">65.00%</span></td>
+      </tr>
+      <tr>
+        <td>Your Total Score</td>
+        <td><span class="total-score">3 / 5</span></td>
+      </tr>
+    </table>
+    <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+    <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
+  </div>
+  <script src="Js/ques.js"></script>
+  <script src="Js/app.js"></script>
+</body>
+
+</html>
